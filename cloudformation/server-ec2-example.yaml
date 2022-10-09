@@ -1,0 +1,14 @@
+myEC2Instance:
+  Type: AWS::EC2::Instance
+  Properties:
+    KeyName: WebServer01
+    AvailabilityZone: us-east-1a
+    DisableApiTermination: 
+    ImageId: ami-02bcbb802e03574ba
+    InstanceType: t2.micro
+    Monitoring: true
+    SecurityGroupIds:
+      - sg-id
+    UserData: !Base64 |
+      #!/bin/bash -ex
+      yum -f update

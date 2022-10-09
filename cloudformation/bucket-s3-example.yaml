@@ -1,0 +1,10 @@
+s3Bucket:
+  Type: AWS::S3::Bucket
+  Properties: 
+    AccessControl: PublicRead
+    BucketName: "my-notes"
+    CorsConfiguration: 
+    LifecycleConfiguration: 
+    NotificationConfiguration: 
+    VersioningConfiguration: 
+    WebsiteConfiguration: 
